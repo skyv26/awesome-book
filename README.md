@@ -1,56 +1,49 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Project Name
 
-> Description the project.
+> Awesome Book project is a project in order to practice and learn the things more about on JavaScript. It is in its initial state and as the day will pass more feature will be added to this project later.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Major languages: JavaScript (ES6)
+- Frameworks: No framework only Vanilla JS
+- Technologies used: HTML, CSS and JavaScript
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[click here for demo](https://skyv26.github.io/awesome-book/)
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- use git clone in order to get the copy this repo. You need to have atleast basic understanding of JavaScript.
+
 ### Setup
+
+- You can simply open it on your vscode in order to start working on it
 
 ### Install
 
+- please first install the node package files
+
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+- In order to use this project you either create branch to add more feature.
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@skyv26](https://github.com/skyv26)
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@shella12](https://github.com/shella12)
 
 ## 🤝 Contributing
 
