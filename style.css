@@ -1,12 +1,14 @@
 
-*,*::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .logo {
-  margin-bottom: 3rem;
+  margin: 1rem 0;
   padding-left: 1rem;
 }
 
@@ -16,13 +18,14 @@
   list-style: none;
   align-items: flex-start;
   padding-left: 1rem;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .uList .list {
   padding-bottom: 1rem;
   width: 100%;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.75);
 }
 
 .input-form {
@@ -30,7 +33,6 @@
   flex-direction: column;
   gap: 1rem;
   padding-left: 1rem;
-
 }
 
 .inputs {

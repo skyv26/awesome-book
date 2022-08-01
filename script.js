@@ -1,41 +1,74 @@
+let bookObject = {};
+let preserveDataList = [];
+const uList = document.querySelector('.uList');
+const form = document.querySelector('.input-form');
 
-const bookObject = {};
-const preserveDataList = [];
+const localStorageHandler = (arrObj, mode = true) => {
+  if (mode) {
+    localStorage.setItem('data', JSON.stringify(arrObj));
+  } else {
+    return JSON.parse(localStorage.getItem('data'));
+  }
 
-const bookStoreSection=document.querySelector('.book-store');
-
-const uList=document.createElement('ul');
-uList.className="uList";
-bookStoreSection.appendChild(uList);
-
-const list=document.createElement('li');
-list.className="list";
-uList.appendChild(list);
-
-const bookTitle=document.createElement('h2');
-bookTitle.className="bookTitle";
-list.appendChild(bookTitle);
-
-const bookAuthor=document.createElement('h3');
-bookAuthor.className="bookAuthor";
-list.appendChild(bookAuthor);
-
-const removeButton=document.createElement('button');
-removeButton.className="remove-btn";
-list.appendChild(removeButton);
-
-const localStorageHandler = () => {
-
+  return null;
 };
 
-const objIteratorHandler = () => {
-
+const requestedDataHandler = (preserveDataList) => {
+  if (preserveDataList.length === 0) {
+    return localStorageHandler(preserveDataList, false);
+  }
+  return preserveDataList;
 };
 
-const addBook = () => {
+const objIteratorHandler = (preserveDataList, mode = false) => {
+  const htmlObjList = preserveDataList.map((each, id) => `<li class="list">
+        <h2 class="bookTitle">${each.title}</h2>
+        <h3 class="bookAuthor">${each.author}</h3>
+        <button class="remove-btn btn-${id}">Remove</button>
+      </li>`);
 
+  uList.textContent = '';
+
+  if (!mode) {
+    localStorageHandler(preserveDataList);
+  }
+
+  htmlObjList.forEach((each) => {
+    uList.insertAdjacentHTML('afterbegin', each);
+  });
 };
 
-const removeBook = () => {
-
+const addBook = (obj) => {
+  preserveDataList.push(obj);
+  objIteratorHandler(preserveDataList);
 };
+
+// ADD BUTTON FUNCTION
+form.addEventListener('click', function formHandler(e) {
+  e.preventDefault();
+  const { target } = e;
+  if (target.type === 'submit') {
+    const title = this.querySelector('.form-title').value;
+    const author = this.querySelector('.form-author').value;
+    bookObject = { title, author };
+    addBook(bookObject);
+    this.reset();
+  }
+});
+
+// REMOVE BUTTON FUNCTION
+uList.addEventListener('click', (e) => {
+  const { target } = e;
+  if (target.nodeName.toLowerCase() === 'button') {
+    const getId = target.classList[1].split('-')[1];
+    preserveDataList = Object.assign(requestedDataHandler(preserveDataList));
+    preserveDataList.splice(getId, 1);
+    objIteratorHandler(preserveDataList);
+  }
+});
+
+const fetchDataLocalStorage = localStorageHandler([], false);
+
+if (fetchDataLocalStorage !== null && fetchDataLocalStorage.length) {
+  objIteratorHandler(fetchDataLocalStorage, true);
+}
