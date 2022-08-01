@@ -44,16 +44,13 @@ const addBook = (obj) => {
 };
 
 // ADD BUTTON FUNCTION
-form.addEventListener('click', function formHandler(e) {
+form.addEventListener('submit', function formHandler(e) {
   e.preventDefault();
-  const { target } = e;
-  if (target.type === 'submit') {
-    const title = this.querySelector('.form-title').value;
-    const author = this.querySelector('.form-author').value;
-    bookObject = { title, author };
-    addBook(bookObject);
-    this.reset();
-  }
+  const title = this.querySelector('.form-title').value;
+  const author = this.querySelector('.form-author').value;
+  bookObject = { title, author };
+  addBook(bookObject);
+  this.reset();
 });
 
 // REMOVE BUTTON FUNCTION
@@ -70,5 +67,6 @@ uList.addEventListener('click', (e) => {
 const fetchDataLocalStorage = localStorageHandler([], false);
 
 if (fetchDataLocalStorage !== null && fetchDataLocalStorage.length) {
+  preserveDataList = fetchDataLocalStorage;
   objIteratorHandler(fetchDataLocalStorage, true);
 }
