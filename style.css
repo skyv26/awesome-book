@@ -11,7 +11,7 @@ html {
   min-height: 100%;
 }
 
-body{
+body {
   height: 100%;
 }
 
@@ -63,17 +63,27 @@ body{
   padding: 1rem 1rem 1.6rem 1rem;
 }
 
-.bookTitle, .bookAuthor {
+.bookTitle,
+.bookAuthor {
   font-size: 1.75rem;
 }
-
 
 .uList .list:nth-child(odd) {
   background-color: rgba(128, 128, 128, 0.6);
 }
 
+.inputs {
+  width: 100%;
+  height: 3.75rem;
+}
 
-.remove-btn, .inputs:nth-child(3) {
+.inputs:nth-child(3) {
+  width: max-content;
+  align-self: flex-end;
+}
+
+.remove-btn,
+.inputs:nth-child(3) {
   padding: 0.4rem 1rem;
   font-size: 1.6rem;
   font-weight: bold;
@@ -82,17 +92,19 @@ body{
   box-shadow: 5px 5px 3px 0 black;
 }
 
-.remove-btn:hover, .inputs:nth-child(3):hover {
+.remove-btn {
+  margin-left: auto;
+}
+
+.remove-btn:hover,
+.inputs:nth-child(3):hover {
   cursor: pointer;
 }
 
-.remove-btn:active, .inputs:nth-child(3):active {
+.remove-btn:active,
+.inputs:nth-child(3):active {
   box-shadow: none;
-  transform: translate(4px,4px);
-}
-
-.remove-btn {
-  margin-left: auto;
+  transform: translate(4px, 4px);
 }
 
 .input-form {
@@ -102,11 +114,6 @@ body{
   gap: 2.6rem;
   width: 50%;
   margin: auto;
-}
-
-.inputs {
-  width: 100%;
-  height: 3.75rem;
 }
 
 .inputs:not(.inputs:nth-child(3)) {
@@ -119,9 +126,4 @@ body{
 .inputs:not(.inputs:nth-child(3))::placeholder {
   color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
-}
-
-.inputs:nth-child(3) {
-  width: max-content;
-  align-self: flex-end;
 }
