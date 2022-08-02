@@ -13,7 +13,7 @@ class Book {
   }
 
   add(title, author) {
-    this.bookObject = {title, author};
+    this.bookObject = { title, author };
     this.preserveDataList.push(this.bookObject);
     this.objIteratorHandler();
   }
@@ -25,7 +25,7 @@ class Book {
   }
 
   objIteratorHandler(mode = false) {
-    const htmlObjList = this.preserveDataList.map((each, id) => `<li class="list"><h2 class="bookTitle">${each.title}</h2><h3 class="bookAuthor">${each.author}</h3><button class="remove-btn btn-${id}">Remove</button></li>`);
+    const htmlObjList = this.preserveDataList.map((each, id) => `<li class="list"><h2 class="bookTitle">"${each.title}"&nbsp;by</h2><h3 class="bookAuthor">&nbsp;${each.author}</h3><button class="remove-btn btn-${id}">Remove</button></li>`);
     uList.textContent = '';
 
     if (!mode) {
