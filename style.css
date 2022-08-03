@@ -16,6 +16,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: 'Comic Neue', cursive;
+
 }
 
 /* navigation */
@@ -62,8 +64,9 @@ a {
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
 }
-.menu-ul .list:nth-child(1){
-color: blue;
+
+.menu-ul .list .link.active {
+  color: blue;
 }
 
 .menu-ul .list:nth-child(2) {
@@ -73,7 +76,8 @@ color: blue;
 }
 
 .clock{
-  font-size: 1.4rem;
+  font-size: 1.75rem;
+  font-weight: bold;
   align-self: flex-end;
 }
 
@@ -93,13 +97,17 @@ color: blue;
   gap: 1.75rem;
 }
 
+.section.active{
+  display: flex;
+}
+
 .section .heading {
   font-size: 3.75rem;
 }
 
 .books-view_section {
   padding: 0 0.6rem;
-  height: 45rem;
+  height: 38rem;
 }
 
 .uList {
@@ -198,9 +206,5 @@ color: blue;
 .desc,.contact-list .list{
 font-size: 1.8rem;
 font-weight: normal;
-}
-
-.active{
-  display: flex;
 }
 

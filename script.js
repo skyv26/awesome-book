@@ -1,7 +1,7 @@
 const uList = document.querySelector('.uList');
 const form = document.querySelector('.input-form');
-const navList=document.querySelectorAll('.menu-ul .list a');
-
+const menu = document.querySelector('.menu-ul');
+const dateTime = document.querySelector('.date-time');
 
 class Book {
   constructor() {
@@ -73,14 +73,36 @@ uList.addEventListener('click', (e) => {
   }
 });
 
-navList.forEach((element)=>{element.addEventListener('click',function navigate(event){
+menu.addEventListener('click', (e) => {
+  const target = e.target ?? null;
+  if (target.nodeName.toLowerCase() === 'a') {
+    const allAnchor = menu.querySelectorAll('.link');
+    allAnchor.forEach((each) => {
+      each.classList.remove('active');
+    });
+    target.classList.add('active');
+    const sectionId = target.getAttribute('href');
+    const targetSection = document.querySelector(sectionId);
+    const getAllLink = document.querySelectorAll('.section');
 
-console.log(element.getAttribute('href'));
-console.log(event.target);
-const sectionId=element.getAttribute('href');
-const sectionOther=document.querySelector(sectionId);
-sectionOther.classList.add('active');
-const section=document.querySelector('.section');
-section.classList.toggle('active');
-})
+    getAllLink.forEach((each) => {
+      each.classList.remove('active');
+    });
+
+    targetSection.classList.add('active');
+  }
 });
+
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
+
+setInterval(() => {
+  const dateObj = new Date();
+  const dateString = dateObj.toLocaleString('en-US', options).split(',').slice(1).join('');
+  const timeString = dateObj.toLocaleTimeString('en-US');
+  dateTime.textContent = `${dateString}, ${timeString}`;
+}, 1000)
