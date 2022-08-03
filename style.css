@@ -14,9 +14,54 @@ html {
 body {
   height: 100%;
 }
+/* navigation */
+.header, .footer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap:1rem;
+}
 
-.header {
-  display: none;
+.header-content_wrapper, .footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border:4px solid black ;
+  padding:0 .5rem 0 2rem;
+
+}
+
+.footer{
+  margin:2rem;
+align-items: flex-start;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.logo, .footer-text {
+  font-size: 2.75rem;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.menu-ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding:1rem 2.6rem;
+}
+
+.list{
+  font-size: 1.6rem;
+  font-weight:500;
+  border-right: 3px solid black;
+  padding:0 2rem;
+}
+
+.clock{
+  font-size: 1.4rem;
+  align-self: flex-end;
 }
 
 .book-store {
@@ -37,11 +82,6 @@ body {
 
 .section .heading {
   font-size: 3.75rem;
-}
-
-.logo {
-  margin: 1rem 0;
-  padding-left: 1rem;
 }
 
 .uList {
