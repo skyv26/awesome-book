@@ -186,3 +186,12 @@ a {
   color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
 }
+
+/* contact */
+.contact_section{
+  padding: 2rem;
+}
+.desc,.contact-list .list{
+font-size: 1.8rem;
+font-weight: normal;
+}
