@@ -74,7 +74,7 @@ a {
   align-self: flex-end;
 }
 
-.book-store {
+.main {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
