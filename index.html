@@ -5,22 +5,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome Books</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
   <header class="header">
+   <div class="header-content_wrapper">
     <h1 class="logo">Awesome Books</h1>
+    <nav class="menu">
+      <ul class="menu-ul">
+
+        <li class="list">
+          <a href="#list-item" class="link active">List</a>
+        </li>
+
+        <li class="list">
+          <a href="#add-item" class="link">Add New</a>
+        </li>
+
+        <li class="list">
+          <a href="#contact" class="link">Contact</a>
+        </li>
+  
+      </ul>
+    </nav>
+  </div>
+  <div class="clock">
+     <p class="date-time"></p>
+  </div>
   </header>
 
   <main class="main">
-    <div class="book-store">
-      <section class="section books-view_section">
+      <section id="list-item" class="section books-view_section active">
         <h2 class="heading">All awesome books</h2>
         <ul class="uList">
         </ul>
       </section>
 
-      <section class="section books-add_section">
+      <section id="add-item" class="section books-add_section">
         <h2 class="heading">Add a new book</h2>
         <form class="input-form">
           <input type="text" class="form-title inputs" placeholder="Title" aria-label="enter the book title" />
@@ -28,9 +53,28 @@
           <input type="submit" class="inputs" value="Add" aria-label="add the new book" />
         </form>
       </section>
-    </div>
+
+      <section id="contact" class="section contact_section">
+        <h2 class="heading">Contact Information</h2>
+        <div class="contact-info">
+          <p class="desc">
+            Do you have any questions or just want to say "Hello"?
+            You can react out to us ?
+          </p>
+        </div>
+        <ul class="contact-list">
+          <li class="list"> Our email: <a href="mailto:dev.aakashv@gmail.com" class="contact-link email">dev.aakashv@gmail.com</a></li>
+          <li class="list"> Our phone number: <a href="tel:+917009243305" class="contact-link phone">+917009243305</a></li>
+          <li class="list"> Our address: <a class="contact-link phone">Ferozepur, Punjab</a></li>
+        </ul>
+      </section>
+
   </main>
 
-  <script src="script.js"></script>
+  <footer class="footer">
+    <h4 class="footer-text">Copyright</h4>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
