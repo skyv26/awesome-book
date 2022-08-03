@@ -1,5 +1,7 @@
 const uList = document.querySelector('.uList');
 const form = document.querySelector('.input-form');
+const navList=document.querySelectorAll('.menu-ul .list a');
+
 
 class Book {
   constructor() {
@@ -69,4 +71,16 @@ uList.addEventListener('click', (e) => {
     const getId = target.classList[1].split('-')[1];
     book.remove(getId);
   }
+});
+
+navList.forEach((element)=>{element.addEventListener('click',function navigate(event){
+
+console.log(element.getAttribute('href'));
+console.log(event.target);
+const sectionId=element.getAttribute('href');
+const sectionOther=document.querySelector(sectionId);
+sectionOther.classList.add('active');
+const section=document.querySelector('.section');
+section.classList.toggle('active');
+})
 });
