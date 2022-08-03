@@ -17,27 +17,28 @@ body {
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Comic Neue', cursive;
-
 }
 
 /* navigation */
-.header, .footer {
+.header,
+.footer {
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
-  gap:1rem;
+  gap: 1rem;
 }
 
-.header-content_wrapper, .footer{
+.header-content_wrapper,
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border:4px solid black ;
+  border: 4px solid black;
   padding: 0 1.6rem;
 }
 
-.footer{
-  margin:2rem;
+.footer {
+  margin: 2rem;
   align-items: flex-start;
 }
 
@@ -46,21 +47,22 @@ a {
   color: inherit;
 }
 
-.logo, .footer-text {
+.logo,
+.footer-text {
   font-size: 2.75rem;
   margin: 1rem 0;
 }
 
-.menu-ul{
+.menu-ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   gap: 1.75rem;
 }
 
-.list{
+.list {
   font-size: 1.6rem;
-  font-weight:700;
+  font-weight: 700;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
 }
@@ -69,13 +71,26 @@ a {
   color: blue;
 }
 
+.uList .list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem 1.6rem 1rem;
+}
+
+.desc,
+.contact-list .list {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
 .menu-ul .list:nth-child(2) {
   border-right-color: black;
   border-left-color: black;
-  padding:0 1.75rem;
+  padding: 0 1.75rem;
 }
 
-.clock{
+.clock {
   font-size: 1.75rem;
   font-weight: bold;
   align-self: flex-end;
@@ -85,7 +100,7 @@ a {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 1rem;
 }
 
 .section {
@@ -95,9 +110,10 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 1.75rem;
+  height: 35vh;
 }
 
-.section.active{
+.section.active {
   display: flex;
 }
 
@@ -107,7 +123,6 @@ a {
 
 .books-view_section {
   padding: 0 0.6rem;
-  height: 38rem;
 }
 
 .uList {
@@ -122,13 +137,6 @@ a {
   scroll-behavior: smooth;
 }
 
-.uList .list {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 1rem 1rem 1.6rem 1rem;
-}
-
 .bookTitle,
 .bookAuthor {
   font-size: 1.75rem;
@@ -136,10 +144,6 @@ a {
 
 .uList .list:nth-child(odd) {
   background-color: rgba(128, 128, 128, 0.6);
-}
-
-.books-add_section {
-  display: none;
 }
 
 .inputs {
@@ -199,12 +203,6 @@ a {
 }
 
 /* contact */
-.contact_section{
+.contact_section {
   padding: 2rem;
-  display: none;
 }
-.desc,.contact-list .list{
-font-size: 1.8rem;
-font-weight: normal;
-}
-

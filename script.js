@@ -43,7 +43,7 @@ class Book {
     if (mode) {
       localStorage.setItem('data', JSON.stringify(this.preserveDataList));
     } else {
-      this.preserveDataList = JSON.parse(localStorage.getItem('data'));
+      this.preserveDataList = JSON.parse(localStorage.getItem('data')) ?? []; // Nullish Coelasing Operator
     }
   }
 
@@ -105,4 +105,4 @@ setInterval(() => {
   const dateString = dateObj.toLocaleString('en-US', options).split(',').slice(1).join('');
   const timeString = dateObj.toLocaleTimeString('en-US');
   dateTime.textContent = `${dateString}, ${timeString}`;
-}, 1000)
+}, 1000);
